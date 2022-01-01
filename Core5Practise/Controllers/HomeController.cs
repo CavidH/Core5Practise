@@ -15,6 +15,8 @@ namespace Core5Practise.Controllers
 
             var PersonTuple = (s, t);
             return View(PersonTuple);
+
+
         }
 
         public IActionResult Create()
@@ -26,12 +28,19 @@ namespace Core5Practise.Controllers
             };
             return View(product);
         } 
-            public IActionResult Product(string id,string a,string b)
+            public IActionResult Product()
             {
-                var values = Request.RouteValues;
-               
-                return Content(" ");
+                var headers = Request.Headers;
+
+                 return Content(" ");
             }
+            // public IActionResult Product(string id,string a,string b)
+            // {
+            //     var values = Request.RouteValues;
+            //     var headers = Request.Headers;
+            //
+            //      return Content(" ");
+            // }
             // public IActionResult Product(QueryData queryData)
             // {
             //
@@ -63,10 +72,10 @@ namespace Core5Practise.Controllers
         }
     }
 
-    public class QueryData
-    {
-        public int id { get; set; }
-        public string Name { get; set; }
+    //public class QueryData
+    //{
+    //    public int id { get; set; }
+    //    public string Name { get; set; }
         
-    }
+    //}
 }

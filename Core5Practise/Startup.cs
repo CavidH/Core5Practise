@@ -32,7 +32,7 @@ namespace Core5Practise
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("CustomRoute", "{controller=Home}/{action=index}/{a}/{b}/{id?}");
-                // endpoints.MapDefaultControllerRoute();
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }
