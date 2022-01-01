@@ -14,5 +14,21 @@ namespace Core5Practise.Controllers
             var PersonTuple = (s, t);
             return View(PersonTuple);
         }
+
+        public IActionResult Create()
+        {
+            var product = new Product
+            {
+                name = "SDDS",
+                quantity =87 
+            };
+            return View(product);
+        }
+        
+        [HttpPost]
+        public IActionResult Create(Product product)
+        {
+            return View();
+        }
     }
 }
