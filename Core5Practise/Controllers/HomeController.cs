@@ -1,4 +1,5 @@
 ﻿using Core5Practise.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Core5Practise.Controllers
@@ -20,14 +21,23 @@ namespace Core5Practise.Controllers
             var product = new Product
             {
                 name = "SDDS",
-                quantity =87 
+                quantity =87    
             };
             return View(product);
         }
         
+        // [HttpPost]
+        // public IActionResult Create(Product product)
+        // {
+        //     return View();
+        // }
+        //
         [HttpPost]
-        public IActionResult Create(Product product)
+        public IActionResult Create(IFormCollection datas)
         {
+            var a = datas["name"].ToString();
+            var b = datas["quantity"].ToString();
+            
             return View();
         }
     }
