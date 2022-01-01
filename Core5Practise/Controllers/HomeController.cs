@@ -1,4 +1,5 @@
-﻿using Core5Practise.Models;
+﻿using System;
+using Core5Practise.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,12 +26,18 @@ namespace Core5Practise.Controllers
             };
             return View(product);
         } 
-            public IActionResult Product(QueryData queryData)
+            public IActionResult Product(string id,string a,string b)
             {
-            
+                var values = Request.RouteValues;
                
                 return Content(" ");
             }
+            // public IActionResult Product(QueryData queryData)
+            // {
+            //
+            //    
+            //     return Content(" ");
+            // }
             // public IActionResult Product()
             // {
             //     var c=Request.QueryString; //request zamanı gələn query sting haqqında məlumat üçün
