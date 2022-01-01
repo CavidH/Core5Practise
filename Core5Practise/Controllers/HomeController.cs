@@ -24,7 +24,21 @@ namespace Core5Practise.Controllers
                 quantity =87    
             };
             return View(product);
-        }
+        } 
+            public IActionResult Product(QueryData queryData)
+            {
+            
+               
+                return Content(" ");
+            }
+            // public IActionResult Product()
+            // {
+            //     var c=Request.QueryString; //request zamanı gələn query sting haqqında məlumat üçün
+            //     var id = Request.Query["id"].ToString();
+            //     var name = Request.Query["name"].ToString();
+            //    
+            //     return Content(" ");
+            // }
         
         // [HttpPost]
         // public IActionResult Create(Product product)
@@ -40,5 +54,12 @@ namespace Core5Practise.Controllers
             
             return View();
         }
+    }
+
+    public class QueryData
+    {
+        public int id { get; set; }
+        public string Name { get; set; }
+        
     }
 }
