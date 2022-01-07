@@ -70,6 +70,22 @@ namespace Core5Practise.Controllers
             
             return View();
         }
+        
+        
+        
+        [HttpPost]
+        public IActionResult ResJs(AjaxData ajaxData)
+        {
+
+            return Json(ajaxData);
+        }
+    }
+
+    public class AjaxData
+    {
+        public string A { get; set; }
+        public string B { get; set; }
+        
     }
 
     //public class QueryData

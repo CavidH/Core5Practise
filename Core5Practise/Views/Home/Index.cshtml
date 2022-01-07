@@ -3,7 +3,7 @@
 @model (Core5Practise.Models.Student s,Core5Practise.Models.Teacher t)
 
 <a asp-action="Product" asp-controller="Home" asp-route-a="testa" asp-route-b="testb" asp-route-id="45" asp-route-dd="sdfsdf">Link</a>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <br/><br/><br/><br/>
 <br/><br/><br/><br/>
 <email Email="hcavid386@gmail.com" content="Email"></email>
@@ -11,3 +11,17 @@
 <p>@Model.t.SurName</p> 
 
 <p>@(5 + 6)</p>
+
+<br/>
+<hr/>
+<input id="txtbox" type="text" />
+<hr/>
+<button id="button">gonder</button>
+<script>
+const x =document.getElementById("txtbox").value;
+  
+ 
+$("#button").click(()=>{
+    $.post("https://localhost:5001/home/ResJs",{a:x,b:"b data"})
+});
+</script>
