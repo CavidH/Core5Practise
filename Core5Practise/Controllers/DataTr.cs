@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Core5Practise.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Core5Practise.Controllers
 {
@@ -7,11 +8,13 @@ namespace Core5Practise.Controllers
         // GET
         public IActionResult Index()
         {
-            return View();
+            var tuple = (new Student(), new Teacher());
+            return View(tuple);
         }
         [HttpPost]
-        public IActionResult GetData()
+        public IActionResult GetData([Bind(Prefix="item1")] Student student,[Bind(Prefix="item2")]Teacher teacher)
         {
+            
             
             
             

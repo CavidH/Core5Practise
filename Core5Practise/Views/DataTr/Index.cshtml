@@ -2,8 +2,10 @@
 
 @model (Core5Practise.Models.Student student,Core5Practise.Models.Teacher teacher)
 <h1>Data post vvith tuple </h1>
-<form asp-action="Index" method="post">
-    <input asp-for="">
-    <input type="text" name="" id="">
-    <input type="button" value="">
+<form asp-action="GetData" method="post">
+    <label asp-for="student.Name">Student Name</label>
+    <input asp-for="student.Name">
+    <label asp-for="teacher.Name">Teacher Name</label>
+    <input asp-for="teacher.Name">
+   <button>Post</button>
 </form>
