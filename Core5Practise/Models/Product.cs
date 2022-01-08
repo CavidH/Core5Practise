@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Core5Practise.Models
 {
-    
-    
-    // [ModelMetadataType(typeof(ProductMetaData))]
+
+
+    [ModelMetadataType(typeof(ProductMetaData))]
     public class Product
     {
         public string name { get; set; }

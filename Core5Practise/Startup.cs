@@ -25,6 +25,7 @@ namespace Core5Practise
             }
 
             app.UseRouting();
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {
