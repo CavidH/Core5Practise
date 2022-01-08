@@ -1,0 +1,15 @@
+﻿@model Product
+<h1>Data post vvith tuple </h1>
+<form asp-action="CreateProduct" method="post">
+        @* <div asp-validation-summary="ModelOnly"></div> *@
+    <label asp-for="name"></label>
+    <span class="text-danger" style="color:red;" asp-validation-for="name"></span>
+    <input asp-for="name" placeholder="Enter Product Name">
+    <label asp-for="Email"></label>
+    <span style="color:red;" asp-validation-for="Email"></span>
+    <input asp-for="Email" placeholder="Enter Email">
+    <label asp-for="quantity"></label>
+    <span style="color:red;" asp-validation-for="quantity"></span>
+    <input asp-for="quantity" placeholder="Enter Product Quantity">
+    <button>Post</button>
+</form>
