@@ -19,7 +19,7 @@ namespace Core5Practise.Controllers.Vl {
                 // {
                 //     ModelState.AddModelError("",erorr.ErrorMessage);
                 // }
-                var msg = ModelState.ToList();
+                // var msg = ModelState.ToList();
 
                 return View(product);
             }

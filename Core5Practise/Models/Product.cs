@@ -1,13 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Runtime.Intrinsics.Arm;
-using Core5Practise.Models.ModelMetaDataTypes;
+﻿using Core5Practise.Models.ModelMetaDataTypes;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Core5Practise.Models
 {
     
     
-    [ModelMetadataType(typeof(ProductMetaData))]
+    // [ModelMetadataType(typeof(ProductMetaData))]
     public class Product
     {
         public string name { get; set; }
