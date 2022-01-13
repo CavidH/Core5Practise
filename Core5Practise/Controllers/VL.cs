@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.ComponentModel;
+using System.Linq;
+using System.Security.Cryptography;
 using Core5Practise.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,7 +25,8 @@ namespace Core5Practise.Controllers.Vl {
 
                 return View(product);
             }
-          
+
+            
             return Content("");
         }
         

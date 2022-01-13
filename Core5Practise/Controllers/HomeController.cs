@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Core5Practise.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,14 +10,15 @@ namespace Core5Practise.Controllers
     {
         public IActionResult Index()
         {
-            var s = new Student { Name = "Cavid", SurName = "Haciyev" };
-            var t = new Teacher { Name = "Cavid", SurName = "Haciyev" };
+            // var s = new Student { Name = "Cavid", SurName = "Haciyev" };
+            // var t = new Teacher { Name = "Cavid", SurName = "Haciyev" };
 
 
-            var PersonTuple = (s, t);
-            return View(PersonTuple);
-
-
+            // var PersonTuple = (s, t);
+            // return View(PersonTuple);
+            ViewBag.data = new List<string> {"data1", "data2", "data3", "data4"};
+            var c = new object();
+            return View(c);
         }
 
         public IActionResult Create()
@@ -24,38 +26,39 @@ namespace Core5Practise.Controllers
             var product = new Product
             {
                 name = "SDDS",
-                quantity =87    
+                quantity = 87
             };
             return View(product);
-        } 
-            public IActionResult Product()
-            {
-                var headers = Request.Headers;
+        }
 
-                 return Content(" ");
-            }
-            // public IActionResult Product(string id,string a,string b)
-            // {
-            //     var values = Request.RouteValues;
-            //     var headers = Request.Headers;
-            //
-            //      return Content(" ");
-            // }
-            // public IActionResult Product(QueryData queryData)
-            // {
-            //
-            //    
-            //     return Content(" ");
-            // }
-            // public IActionResult Product()
-            // {
-            //     var c=Request.QueryString; //request zamanı gələn query sting haqqında məlumat üçün
-            //     var id = Request.Query["id"].ToString();
-            //     var name = Request.Query["name"].ToString();
-            //    
-            //     return Content(" ");
-            // }
-        
+        public IActionResult Product()
+        {
+            var headers = Request.Headers;
+
+            return Content(" ");
+        }
+        // public IActionResult Product(string id,string a,string b)
+        // {
+        //     var values = Request.RouteValues;
+        //     var headers = Request.Headers;
+        //
+        //      return Content(" ");
+        // }
+        // public IActionResult Product(QueryData queryData)
+        // {
+        //
+        //    
+        //     return Content(" ");
+        // }
+        // public IActionResult Product()
+        // {
+        //     var c=Request.QueryString; //request zamanı gələn query sting haqqında məlumat üçün
+        //     var id = Request.Query["id"].ToString();
+        //     var name = Request.Query["name"].ToString();
+        //    
+        //     return Content(" ");
+        // }
+
         // [HttpPost]
         // public IActionResult Create(Product product)
         // {
@@ -67,16 +70,14 @@ namespace Core5Practise.Controllers
         {
             var a = datas["name"].ToString();
             var b = datas["quantity"].ToString();
-            
+
             return View();
         }
-        
-        
-        
+
+
         [HttpPost]
         public IActionResult ResJs(AjaxData ajaxData)
         {
-
             return Json(ajaxData);
         }
     }
@@ -85,13 +86,12 @@ namespace Core5Practise.Controllers
     {
         public string A { get; set; }
         public string B { get; set; }
-        
     }
 
     //public class QueryData
     //{
     //    public int id { get; set; }
     //    public string Name { get; set; }
-        
+
     //}
 }
